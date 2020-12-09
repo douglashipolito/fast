@@ -71,7 +71,7 @@ export class Anchor extends FASTElement {
 export interface Anchor extends StartEnd, DelegatesARIALink {
 }
 
-// @public (undocumented)
+// @public
 export class AnchoredRegion extends FASTElement {
     // @internal (undocumented)
     adoptedCallback(): void;
@@ -136,7 +136,7 @@ export class ARIAGlobalStatesAndProperties {
     ariaRoledescription: string;
 }
 
-// @public (undocumented)
+// @public
 export enum AxisPositioningMode {
     // (undocumented)
     dynamic = "dynamic",
@@ -146,7 +146,7 @@ export enum AxisPositioningMode {
     uncontrolled = "uncontrolled"
 }
 
-// @public (undocumented)
+// @public
 export enum AxisScalingMode {
     // (undocumented)
     anchor = "anchor",
@@ -350,32 +350,67 @@ export interface DecoratorDesignSystemPropertyConfiguration extends Omit<Decorat
 // @public
 export function defineDesignSystemProvider(nameOrDef: string | PartialFASTElementDefinition): <T extends typeof DesignSystemProvider>(providerCtor: T) => void;
 
+// Warning: (ae-different-release-tags) This symbol has another declaration with a different release tag
+// Warning: (ae-internal-mixed-release-tag) Mixed release tags are not allowed for "DelegatesARIAButton" because one of its declarations is marked as @internal
+//
 // @public
-export class DelegatesARIAButton extends ARIAGlobalStatesAndProperties {
+export class DelegatesARIAButton {
     ariaExpanded: "true" | "false" | undefined;
     ariaPressed: "true" | "false" | "mixed" | undefined;
 }
 
+// @internal
+export interface DelegatesARIAButton extends ARIAGlobalStatesAndProperties {
+}
+
+// Warning: (ae-different-release-tags) This symbol has another declaration with a different release tag
+// Warning: (ae-internal-mixed-release-tag) Mixed release tags are not allowed for "DelegatesARIALink" because one of its declarations is marked as @internal
+//
 // @public
-export class DelegatesARIALink extends ARIAGlobalStatesAndProperties {
+export class DelegatesARIALink {
     ariaExpanded: "true" | "false" | undefined;
 }
 
+// @internal
+export interface DelegatesARIALink extends ARIAGlobalStatesAndProperties {
+}
+
+// Warning: (ae-different-release-tags) This symbol has another declaration with a different release tag
+// Warning: (ae-internal-mixed-release-tag) Mixed release tags are not allowed for "DelegatesARIAListbox" because one of its declarations is marked as @internal
+//
 // @public
-export class DelegatesARIAListbox extends ARIAGlobalStatesAndProperties {
+export class DelegatesARIAListbox {
     // (undocumented)
     ariaActiveDescendant: string;
     ariaExpanded: "true" | "false" | undefined;
     ariaPressed: "true" | "false" | "mixed" | undefined;
 }
 
+// @internal
+export interface DelegatesARIAListbox extends ARIAGlobalStatesAndProperties {
+}
+
+// Warning: (ae-different-release-tags) This symbol has another declaration with a different release tag
+// Warning: (ae-internal-mixed-release-tag) Mixed release tags are not allowed for "DelegatesARIASelect" because one of its declarations is marked as @internal
+//
 // @public
-export class DelegatesARIASelect extends ARIAGlobalStatesAndProperties {
+export class DelegatesARIASelect {
     ariaExpanded: "true" | "false" | undefined;
 }
 
+// @internal
+export interface DelegatesARIASelect extends ARIAGlobalStatesAndProperties {
+}
+
+// Warning: (ae-different-release-tags) This symbol has another declaration with a different release tag
+// Warning: (ae-internal-mixed-release-tag) Mixed release tags are not allowed for "DelegatesARIATextbox" because one of its declarations is marked as @internal
+//
 // @public
-export class DelegatesARIATextbox extends ARIAGlobalStatesAndProperties {
+export class DelegatesARIATextbox {
+}
+
+// @internal
+export interface DelegatesARIATextbox extends ARIAGlobalStatesAndProperties {
 }
 
 // @public
@@ -450,14 +485,6 @@ export class Dialog extends FASTElement {
 
 // @public
 export const DialogTemplate: import("@microsoft/fast-element").ViewTemplate<Dialog, any>;
-
-// @public (undocumented)
-export interface Dimension {
-    // (undocumented)
-    height: number;
-    // (undocumented)
-    width: number;
-}
 
 // @public
 export class DirectionalStyleSheetBehavior implements Behavior {
@@ -591,7 +618,7 @@ export const getDirection: (rootNode: HTMLElement) => Direction;
 // @public
 export const hidden = ":host([hidden]){display:none}";
 
-// @public (undocumented)
+// @public
 export enum HorizontalPosition {
     // (undocumented)
     end = "end",
@@ -1351,7 +1378,7 @@ export class TreeView extends FASTElement {
 // @public
 export const TreeViewTemplate: import("@microsoft/fast-element").ViewTemplate<TreeView, any>;
 
-// @public (undocumented)
+// @public
 export enum VerticalPosition {
     // (undocumented)
     bottom = "bottom",
